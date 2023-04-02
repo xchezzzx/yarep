@@ -23,5 +23,5 @@ jobs:
       - name: Run tests
         run: |
           pytest tests.py
-          echo "32mAll tests had been passed"
+          echo "\e[32mAll tests had been passed"
         
