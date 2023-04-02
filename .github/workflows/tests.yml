@@ -11,7 +11,7 @@ jobs:
       - name: Setup python
         uses: actions/setup-python@v2
       - name: Update pip
-        run: pip install --update
+        run: pip install --upgrade pip
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Install pytest
