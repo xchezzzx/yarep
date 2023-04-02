@@ -13,15 +13,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Setup python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v3
       - name: Install dependencies
+        if: always()
         run: |
           pip install -r requirements.txt
           echo "Dependencies had been installed"
       - name: Install pytest
+        if: always()
         run: pip install pytest
       - name: Run tests
+        if: always()
         run: |
           pytest tests.py
-          echo -e "\e[32mAll tests had been passed"
+          echo -e "\e[1;32mAll tests had been passed\e[0m"
         
