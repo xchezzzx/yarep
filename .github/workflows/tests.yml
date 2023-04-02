@@ -8,11 +8,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        run: echo "Step 1 done"
       - name: Setup python
         uses: actions/setup-python@v4
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          echo "Dependencies had been installed"
       - name: Install pytest
         run: pip install pytest
       - name: Run tests
