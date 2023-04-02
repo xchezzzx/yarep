@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        run: echo "Step 1 done"
       - name: Setup python
         uses: actions/setup-python@v4
       - name: Install dependencies
